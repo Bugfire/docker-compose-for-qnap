@@ -1,0 +1,11 @@
+version: '2'
+
+services:
+  app:
+    image: networkstatic/iperf3
+    command: -s
+    restart: always
+    cpu_shares: 20
+    mem_limit: "2048m"
+    ports:
+      - "5201:5201"
